@@ -1,0 +1,43 @@
+<h1>Rutas de vuelo</h1>
+
+<style>
+       #map {
+        min-height: 900px;
+        height: auto;
+        width: 90%;
+        border: 5px;
+        border-radius: 10px;
+       }
+
+</style>
+
+<center>
+
+
+<div id="map"></div>
+
+<div class="container" hidden="true" id="write">
+  <div class="col-sm-12">
+    <div id="eventPanels">
+    </div>
+  </div>
+</div>
+
+<script>
+  //Código basado en http://amritb.github.io/socketio-client-tool/
+  //Para conexion con servidor.
+  //Gracias totales!
+  function initMap() {
+    var myLatLng = {lat: -33.38899, lng: -70.7846};
+    mapa = new google.maps.Map(document.getElementById('map'), {
+      zoom: 4,
+      center: myLatLng
+    });
+  }
+
+</script>
+</center>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.1/socket.io.slim.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pouchdb/6.2.0/pouchdb.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB23k_7s-Ovk6Meh5ikt_vKIBbhMOh7ny4&callback=initMap"> </script>
